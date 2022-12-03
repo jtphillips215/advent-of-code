@@ -11,5 +11,5 @@ const rock = 1,
 let totalScore = 0;
 
 for (let i = 0; i < input.length; i++) {
-  console.log(input[i]);
+  let round = input[i].split(" ");
 }

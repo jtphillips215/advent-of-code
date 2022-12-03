@@ -34,7 +34,7 @@ for (let i = 0; i < input.length; i++) {
   if (isNaN(input[i])) {
     if (currentCalories > topCaloriesList[0]) {
       topCaloriesList.shift();
-      topCaloriesList.unshift(maxCalories);
+      topCaloriesList.unshift(currentCalories);
       topCaloriesList.sort(function (a, b) {
         return a - b;
       });

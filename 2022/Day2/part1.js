@@ -7,6 +7,9 @@ const rock = 1,
 
 // outcomes: loss = 0, draw = 3, win = 6
 
+// variable to track score
+let totalScore = 0;
+
 for (let i = 0; i < input.length; i++) {
   console.log(input[i]);
 }

@@ -25,12 +25,14 @@ console.log(maxCalories);
 
 // Part 2
 
+// array to track our top 3 calorie counts and variable to track current elf's total
 let topCaloriesList = [0, 0, 0];
-currentCalories = 0;
+currentCalories = 0; // resetting current calories to 0 as it was used in top block
 
-// outer loop iterates through input file
+// This block adds functionality to part 1
+// It operates on the same idea except we have an array and are testing the current calories
+// against the smallest value in the array, replacing it, and sorting the array
 for (let i = 0; i < input.length; i++) {
-  // if the current index in the input isn't a number
   if (isNaN(input[i])) {
     if (currentCalories > topCaloriesList[0]) {
       topCaloriesList.shift();

@@ -32,15 +32,12 @@ currentCalories = 0;
 for (let i = 0; i < input.length; i++) {
   // if the current index in the input isn't a number
   if (isNaN(input[i])) {
-    // iterating through top calories array
-    for (let j = 0; j < topCaloriesList.length; j++) {
-      if (currentCalories > topCaloriesList[j]) {
-        // if current calorie count is larger than an item in array
-        // we are removing the smallest item, adding the new total, and sorting the array
-        topCaloriesList.pop();
-        topCaloriesList.push(currentCalories);
-        topCaloriesList.sort((a, b) => b - a);
-      }
+    if (currentCalories > topCaloriesList[0]) {
+      topCaloriesList.shift();
+      topCaloriesList.unshift(maxCalories);
+      topCaloriesList.sort(function (a, b) {
+        return a - b;
+      });
     }
     currentCalories = 0;
   } else {

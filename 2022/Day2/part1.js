@@ -16,6 +16,7 @@ let elfChoice, playerChoice;
 for (let i = 0; i < input.length; i++) {
   // splitting input into round with an elf and player choice
   let round = input[i].split(" ");
+  round[1] = round[1].trim();
 
   // assigning the elf choice a score based on Rock, Paper, Scissors
   if (round[0] == "A") {
@@ -44,7 +45,7 @@ for (let i = 0; i < input.length; i++) {
   } else if (playerChoice + elfChoice == 4) {
     // else if for player and elf choices being rock and scissors
     if (playerChoice < elfChoice) {
-      // player had rock
+      // player had rock and wins
       totalScore += 6;
     }
   } else if (playerChoice > elfChoice) {
@@ -52,3 +53,5 @@ for (let i = 0; i < input.length; i++) {
     totalScore += 6;
   }
 }
+
+console.log(totalScore);

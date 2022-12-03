@@ -22,3 +22,16 @@ for (let i = 0; i < input.length; i++) {
 }
 
 console.log(maxCalories);
+
+// Part 2
+
+let topCaloriesList = [0, 0, 0];
+currentCalories = 0;
+
+for (let i = 0; i < input.length; i++) {
+  if (isNaN(input[i])) {
+    // currentCalories = 0;
+  } else {
+    currentCalories += input[i];
+  }
+}

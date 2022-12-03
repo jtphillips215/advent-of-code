@@ -29,9 +29,26 @@ for (let i = 0; i < input.length; i++) {
   // assigning player choice a score based on Rock, Paper, Scissors
   if (round[1] == "X") {
     playerChoice = rock;
+    totalScore += 1;
   } else if (round[1] == "Y") {
     playerChoice = paper;
+    totalScore += 2;
   } else {
     playerChoice = scissors;
+    totalScore += 3;
+  }
+
+  if (playerChoice == elfChoice) {
+    // if condition for draw
+    totalScore += 3;
+  } else if (playerChoice + elfChoice == 4) {
+    // else if for player and elf choices being rock and scissors
+    if (playerChoice < elfChoice) {
+      // player had rock
+      totalScore += 6;
+    }
+  } else if (playerChoice > elfChoice) {
+    // covering all other player wins
+    totalScore += 6;
   }
 }

@@ -28,10 +28,24 @@ console.log(maxCalories);
 let topCaloriesList = [0, 0, 0];
 currentCalories = 0;
 
+// outer loop iterates through input file
 for (let i = 0; i < input.length; i++) {
+  // if the current index in the input isn't a number
   if (isNaN(input[i])) {
-    // currentCalories = 0;
+    // iterating through top calories array
+    for (let j = 0; j < topCaloriesList.length; j++) {
+      if (currentCalories > topCaloriesList[j]) {
+        // if current calorie count is larger than an item in array
+        // we are removing the smallest item, adding the new total, and sorting the array
+        topCaloriesList.pop();
+        topCaloriesList.push(currentCalories);
+        topCaloriesList.sort((a, b) => b - a);
+      }
+    }
+    currentCalories = 0;
   } else {
     currentCalories += input[i];
   }
 }
+
+console.log(topCaloriesList[0] + topCaloriesList[1] + topCaloriesList[2]);

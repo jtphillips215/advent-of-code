@@ -7,7 +7,7 @@ const rock = 1,
   paper = 2,
   scissors = 3;
 let totalScore = 0;
-let elfChoice, playerChoice;
+let elfChoice;
 
 for (let i = 0; i < input.length; i++) {
   // splitting input into round with an elf and player choice
@@ -25,20 +25,19 @@ for (let i = 0; i < input.length; i++) {
 
   // using desired outcome to score round
   if (round[1] == "Y") {
-    playerChoice = elfChoice;
-    totalScore += playerChoice + 3;
+    totalScore += elfChoice + 3;
   } else if (round[1] == "X") {
-    if (elfChoice == "A") {
+    if (elfChoice == rock) {
       totalScore += scissors;
-    } else if (elfChoice == "B") {
+    } else if (elfChoice == paper) {
       totalScore += rock;
     } else {
       totalScore += paper;
     }
   } else {
-    if (elfChoice == "A") {
+    if (elfChoice == rock) {
       totalScore += paper + 6;
-    } else if (elfChoice == "B") {
+    } else if (elfChoice == paper) {
       totalScore += scissors + 6;
     } else {
       totalScore += rock + 6;

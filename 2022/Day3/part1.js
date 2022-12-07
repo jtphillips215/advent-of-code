@@ -32,6 +32,7 @@ for (let i = 0; i < input.length; i++) {
   let firstHalf = input[i].substring(0, middleIndex);
   let lastHalf = input[i].substring(middleIndex, input[i].length);
 
+  // collecting common characters and reducing them to unique characters
   if (substringTest(firstHalf, lastHalf)) {
     for (let i = 0; i < firstHalf.length; i++) {
       for (let j = 0; j < firstHalf.length; j++) {
@@ -44,4 +45,15 @@ for (let i = 0; i < input.length; i++) {
   }
 }
 
-console.log(commonChars);
+// if common characters is not empty, adding up priority for items
+if (commonChars != "") {
+  for (let i = 0; i < ALPHABET.length; i++) {
+    for (let j = 0; j < commonChars.length; j++) {
+      if (ALPHABET[i] == commonChars[j]) {
+        totalPriority += i + 1;
+      }
+    }
+  }
+}
+
+console.log(totalPriority);

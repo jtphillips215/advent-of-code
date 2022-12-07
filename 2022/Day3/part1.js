@@ -22,6 +22,7 @@ function substringTest(firstHalf, lastHalf) {
 
 const ALPHABET = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let commonChars = "";
+let combinedChars = "";
 let totalPriority = 0;
 
 for (let i = 0; i < input.length; i++) {
@@ -34,6 +35,7 @@ for (let i = 0; i < input.length; i++) {
 
   // collecting common characters and reducing them to unique characters
   if (substringTest(firstHalf, lastHalf)) {
+    commonChars = "";
     for (let i = 0; i < firstHalf.length; i++) {
       for (let j = 0; j < firstHalf.length; j++) {
         if (firstHalf[i] == lastHalf[j]) {
@@ -41,15 +43,15 @@ for (let i = 0; i < input.length; i++) {
         }
       }
     }
-    commonChars = String.prototype.concat(...new Set(commonChars));
   }
+  combinedChars += String.prototype.concat(...new Set(commonChars));
 }
 
 // if common characters is not empty, adding up priority for items
-if (commonChars != "") {
+if (combinedChars != "") {
   for (let i = 0; i < ALPHABET.length; i++) {
-    for (let j = 0; j < commonChars.length; j++) {
-      if (ALPHABET[i] == commonChars[j]) {
+    for (let j = 0; j < combinedChars.length; j++) {
+      if (ALPHABET[i] == combinedChars[j]) {
         totalPriority += i + 1;
       }
     }

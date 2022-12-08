@@ -7,15 +7,16 @@ for (let i = 0; i < input.length; i++) {
   let firstRange = ranges[0].split("-");
   let secondRange = ranges[1].split("-");
 
-  if (firstRange[0] <= secondRange[0] && firstRange[1] >= secondRange[1]) {
-    counter++;
-  } else if (
-    secondRange[0] <= firstRange[0] &&
-    secondRange[1] >= secondRange[1]
+  if (
+    parseInt(firstRange[0]) <= parseInt(secondRange[0]) &&
+    parseInt(firstRange[1]) >= parseInt(secondRange[1])
   ) {
     counter++;
-  } else {
-    continue;
+  } else if (
+    parseInt(secondRange[0]) <= parseInt(firstRange[0]) &&
+    parseInt(secondRange[1]) >= parseInt(secondRange[1])
+  ) {
+    counter++;
   }
 }
 

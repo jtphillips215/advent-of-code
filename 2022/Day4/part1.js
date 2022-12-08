@@ -14,7 +14,7 @@ for (let i = 0; i < input.length; i++) {
     counter++;
   } else if (
     parseInt(secondRange[0]) <= parseInt(firstRange[0]) &&
-    parseInt(secondRange[1]) >= parseInt(secondRange[1])
+    parseInt(secondRange[1]) >= parseInt(firstRange[1])
   ) {
     counter++;
   }

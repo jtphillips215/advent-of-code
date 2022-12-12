@@ -7,4 +7,4 @@ I've created this repository to hold my Advent of Code solutions. I typically us
 2021 solutions in Python.
 2022 solutions in JavaScript and can be run using Node.
 
-Completed up to day 6.
+Went back to work day 4.

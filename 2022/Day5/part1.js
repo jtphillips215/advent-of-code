@@ -13,8 +13,9 @@
 let firstStack = ["B", "V", "W", "T", "Q", "N", "H", "D"];
 let secondStack = ["B", "W", "D"];
 let thirdStack = ["C", "J", "W", "Q", "S", "t"];
-let fourthStack = [];
-let fifthStack = [];
-let sixthStack = [];
-let seventhStack = [];
-let eighthStack = [];
+let fourthStack = ["P", "T", "Z", "N", "R", "J", "F"];
+let fifthStack = ["T", "S", "M", "J", "V", "P", "G"];
+let sixthStack = ["N", "T", "F", "W", "B"];
+let seventhStack = ["N", "V", "H", "F", "Q", "D", "L", "B"];
+let eighthStack = ["R", "F", "P", "H"];
+let ninthStack = ["H", "P", "N", "L", "B", "M", "S", "Z"];

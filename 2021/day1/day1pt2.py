@@ -1,8 +1,8 @@
+# importing the data set
+file = open("input.txt", "r")
+
 # creating list
 depth_list = []
-
-# importing the data set
-file = open("day1.txt", "r")
 
 # iterating over data set to add to list
 for line in file:

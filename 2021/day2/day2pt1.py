@@ -1,9 +1,9 @@
+# importing the data set
+file = open("input.txt", "r")
+
 # creating lists to hold data
 control_list = []
 line_list = []
-
-# importing the data set
-file = open("day2.txt", "r")
 
 # iterating over data set to create list of lists
 for line in file:

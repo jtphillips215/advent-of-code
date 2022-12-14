@@ -23,6 +23,18 @@ let seventhStack = ["N", "V", "H", "F", "Q", "D", "L", "B"];
 let eighthStack = ["R", "F", "P", "H"];
 let ninthStack = ["H", "P", "N", "L", "B", "M", "S", "Z"];
 
+// adding stacks to map
+let stackMap = new Map();
+stackMap.set(1, firstStack);
+stackMap.set(2, secondStack);
+stackMap.set(3, thirdStack);
+stackMap.set(4, fourthStack);
+stackMap.set(5, fifthStack);
+stackMap.set(6, sixthStack);
+stackMap.set(7, seventhStack);
+stackMap.set(8, eighthStack);
+stackMap.set(9, ninthStack);
+
 // getting input and formatting correctly
 let directions = [];
 
@@ -35,4 +47,23 @@ for (let i = 0; i < input.length; i++) {
   ]);
 }
 
-console.log(directions[0]);
+// moving boxes from one stack to another
+for (let i = 0; i < directions.length; i++) {
+  let command = directions[i];
+  for (let j = 0; j < command[0]; j++) {
+    let box = stackMap.get(command[1]).shift();
+    stackMap.get(command[2]).unshift(box);
+  }
+}
+
+console.log(
+  stackMap.get(1)[0],
+  stackMap.get(2)[0],
+  stackMap.get(3)[0],
+  stackMap.get(4)[0],
+  stackMap.get(5)[0],
+  stackMap.get(6)[0],
+  stackMap.get(7)[0],
+  stackMap.get(8)[0],
+  stackMap.get(9)[0]
+);

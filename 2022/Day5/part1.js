@@ -1,3 +1,5 @@
+const { input } = require("./input");
+
 /*
 [B]                     [N]     [H]
 [V]         [P] [T]     [V]     [P]
@@ -10,6 +12,7 @@
  1   2   3   4   5   6   7   8   9 
 */
 
+// setting up our stacks as arrays
 let firstStack = ["B", "V", "W", "T", "Q", "N", "H", "D"];
 let secondStack = ["B", "W", "D"];
 let thirdStack = ["C", "J", "W", "Q", "S", "t"];
@@ -19,3 +22,17 @@ let sixthStack = ["N", "T", "F", "W", "B"];
 let seventhStack = ["N", "V", "H", "F", "Q", "D", "L", "B"];
 let eighthStack = ["R", "F", "P", "H"];
 let ninthStack = ["H", "P", "N", "L", "B", "M", "S", "Z"];
+
+// getting input and formatting correctly
+let directions = [];
+
+for (let i = 0; i < input.length; i++) {
+  let inputArray = input[i].trim().split(" ");
+  directions.push([
+    parseInt(inputArray[1]),
+    parseInt(inputArray[3]),
+    parseInt(inputArray[5]),
+  ]);
+}
+
+console.log(directions[0]);

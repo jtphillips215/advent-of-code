@@ -6,5 +6,6 @@ I've created this repository to hold my Advent of Code solutions. I typically us
 
 2021 solutions in Python. Started but did not finish.
 2022 solutions in JavaScript and can be run using Node.
+Older AoC years will be completed in various languages as time allows.
 
 Went back to work day 4.

@@ -21,7 +21,14 @@ getTotal = (input) => {
         }
       }
     }
-    console.log(numList);
+    // adding numbers to sum
+    if (numList.length == 1) {
+      let combinedNum = numList[0] + numList[numList.length - 1];
+      sum += Number(combinedNum);
+    } else if (numList.length > 1) {
+      let combinedNum = numList[0] + numList[numList.length - 1];
+      sum += Number(combinedNum);
+    }
   }
   return sum;
 };
